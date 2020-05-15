@@ -60,11 +60,10 @@ public class Amigos {
         this.id_Amigos = id_Amigos;
     }
   
-    /**
-     *   passa os  parâmetros id_amigos e 
-     */
-    public void buscarAmigo (){
-     this.getId_Amigos();
+    
+     
+    public void buscarAmigo (Perfil amigos){
+     
      
         
     }
