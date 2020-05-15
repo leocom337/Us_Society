@@ -5,16 +5,14 @@
  */
 package br.newtonpaiva.us.usuario;
 
-import java.util.Date;
 import java.util.Objects;
 
 /**
  *
- * @author leoms
+ * @author leonardo moreira
  */
 public class Usuario {
    private Integer id_usario;
-   private Date dta_nascimento;
    private String login;
    private String senha;
    private String email;
@@ -26,25 +24,16 @@ public class Usuario {
         return id_usario;
     }
 
+    @Override
+    public String toString() {
+        return "Usuario{" + "id_usario=" + id_usario + ", login=" + login + ", senha=" + senha + ", email=" + email + ", telefone=" + telefone + '}';
+    }
+
     /**
      * @param id_usario the id_usario to set
      */
     public void setId_usario(Integer id_usario) {
         this.id_usario = id_usario;
-    }
-
-    /**
-     * @return the dta_nascimento
-     */
-    public Date getDta_nascimento() {
-        return dta_nascimento;
-    }
-
-    /**
-     * @param dta_nascimento the dta_nascimento to set
-     */
-    public void setDta_nascimento(Date dta_nascimento) {
-        this.dta_nascimento = dta_nascimento;
     }
 
     /**
@@ -93,7 +82,6 @@ public class Usuario {
     public int hashCode() {
         int hash = 5;
         hash = 89 * hash + Objects.hashCode(this.id_usario);
-        hash = 89 * hash + Objects.hashCode(this.login);
         return hash;
     }
 
@@ -109,9 +97,6 @@ public class Usuario {
             return false;
         }
         final Usuario other = (Usuario) obj;
-        if (!Objects.equals(this.login, other.login)) {
-            return false;
-        }
         if (!Objects.equals(this.id_usario, other.id_usario)) {
             return false;
         }

@@ -4,7 +4,8 @@ import java.util.Date;
 import java.util.Objects;
 
 public class Evento {
-    
+private Integer id_evento;
+private Integer id_dono_evento;
 private String nomeEvento;
 private Date dataEvento;
 private String desEndereco;
@@ -68,8 +69,10 @@ private String desEvento;
 
     @Override
     public String toString() {
-        return "Evento{" + "nomeEvento=" + nomeEvento + ", dataEvento=" + dataEvento + ", desEndereco=" + desEndereco + ", desEvento=" + desEvento + '}';
+        return "Evento{" + "id_evento=" + id_evento + ", id_dono_evento=" + id_dono_evento + ", nomeEvento=" + nomeEvento + ", dataEvento=" + dataEvento + ", desEndereco=" + desEndereco + ", desEvento=" + desEvento + '}';
     }
+
+    
 
     public Evento(String nomeEvento, Date dataEvento, String desEndereco, String desEvento) {
         this.nomeEvento = nomeEvento;
@@ -81,10 +84,8 @@ private String desEvento;
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 31 * hash + Objects.hashCode(this.nomeEvento);
-        hash = 31 * hash + Objects.hashCode(this.dataEvento);
-        hash = 31 * hash + Objects.hashCode(this.desEndereco);
-        hash = 31 * hash + Objects.hashCode(this.desEvento);
+        hash = 47 * hash + Objects.hashCode(this.id_evento);
+        hash = 47 * hash + Objects.hashCode(this.id_dono_evento);
         return hash;
     }
 
@@ -100,34 +101,42 @@ private String desEvento;
             return false;
         }
         final Evento other = (Evento) obj;
-        if (!Objects.equals(this.nomeEvento, other.nomeEvento)) {
+        if (!Objects.equals(this.id_evento, other.id_evento)) {
             return false;
         }
-        if (!Objects.equals(this.desEndereco, other.desEndereco)) {
-            return false;
-        }
-        if (!Objects.equals(this.desEvento, other.desEvento)) {
-            return false;
-        }
-        if (!Objects.equals(this.dataEvento, other.dataEvento)) {
+        if (!Objects.equals(this.id_dono_evento, other.id_dono_evento)) {
             return false;
         }
         return true;
     }
 
-public void buscarNome (String nomeEvento) throws Exception{  
-    try{
-        
-        
-        
-        
-    }catch(Exception e){
-        throw new Exception("Nome invalido");
-        
+   
+
+    /**
+     * @return the id_evento
+     */
+    public Integer getId_evento() {
+        return id_evento;
     }
-        
-    
-    
-    
-}
+
+    /**
+     * @param id_evento the id_evento to set
+     */
+    public void setId_evento(Integer id_evento) {
+        this.id_evento = id_evento;
+    }
+
+    /**
+     * @return the id_dono_evento
+     */
+    public Integer getId_dono_evento() {
+        return id_dono_evento;
+    }
+
+    /**
+     * @param id_dono_evento the id_dono_evento to set
+     */
+    public void setId_dono_evento(Integer id_dono_evento) {
+        this.id_dono_evento = id_dono_evento;
+    }
 }
