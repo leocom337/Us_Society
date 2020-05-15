@@ -6,7 +6,7 @@ import java.util.Objects;
 
 /**
  *
- * @author lucas pereira
+ * @author lucas pereira e leonardo Moreira 
  */
 public class ListaAmigos {
   private Integer id_Lista_Amigos;
