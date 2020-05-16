@@ -11,6 +11,13 @@ private Date dataEvento;
 private String desEndereco;
 private String desEvento;
 
+    public Evento(Integer id_evento, Integer id_dono_evento) {
+        this.id_evento = id_evento;
+        this.id_dono_evento = id_dono_evento;
+    }
+
+   
+
     /**
      * @return the nomeEvento
      */

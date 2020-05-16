@@ -16,6 +16,11 @@ public class DonoEvento {
         return id_dono_evento;
     }
 
+    public DonoEvento(Integer id_usuario, Integer id_dono_evento) {
+        this.id_usuario = id_usuario;
+        this.id_dono_evento = id_dono_evento;
+    }
+
     /**
      * @param id_dono_evento the id_dono_evento to set
      */
@@ -68,6 +73,10 @@ public class DonoEvento {
      */
     public void setId_Usuario(Integer id_Usuario) {
         this.id_usuario = id_Usuario;
+    }
+
+    public boolean getnom_estebalecimento() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

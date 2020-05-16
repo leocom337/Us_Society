@@ -30,6 +30,15 @@ public class Main {
         //Teste DonoEvento
         DonoEvento donoEvento = new DonoEvento(1,1);
         
+        System.out.println("\n");
+        
+        donoEvento.setNom_estebalecimento("LeoLeo");
+        System.out.println(donoEvento.getNom_estebalecimento());
+        System.out.println(donoEvento.getNom_estebalecimento().equals ("LeoLeo"));
+        
+        donoEvento.setNum_cnpj("666");
+        System.out.println(donoEvento.getNum_cnpj());
+        System.out.println(donoEvento.getNum_cnpj().equals ("666"));
         }
     
 }
