@@ -9,13 +9,13 @@ public class Main {
         //Teste Evento
        Date date = new Date();
        Evento evento = new Evento(1,1);
-        System.out.println("Digite o nome do evento");
+        System.out.println("Nome do evento");
         
         evento.setNomeEvento("LeoFesta");       
         System.out.println(evento.getNomeEvento());
         System.out.println(evento.getNomeEvento().equals("LeoFesta"));
         
-        evento.setDesEndereco("Rua teste");
+        evento.setDesEndereco("Rua teste: ");
         System.out.println(evento.getDesEndereco());
         System.out.println(evento.getDesEndereco().equals("Rua teste"));
         
@@ -31,7 +31,7 @@ public class Main {
         DonoEvento donoEvento = new DonoEvento(1,1);
         
         System.out.println("\n");
-        
+        System.out.println("Dono do Evento: ");
         donoEvento.setNom_estebalecimento("LeoLeo");
         System.out.println(donoEvento.getNom_estebalecimento());
         System.out.println(donoEvento.getNom_estebalecimento().equals ("LeoLeo"));
